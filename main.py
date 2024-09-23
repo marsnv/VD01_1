@@ -9,7 +9,7 @@ response.raise_for_status()
 
 soup = BeautifulSoup(response.text, 'html.parser')
 
-# Извлечение информации о 5 блюдах
+# Извлечение информации о 5 блюдах d
 dishes = []
 for item in soup.select('.recipe')[:5]:
     name = item.select_one('.listRecipieTitle').get_text(strip=True)
